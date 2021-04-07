@@ -8,9 +8,9 @@
           + Compiled once stored in executable form.
             + Allows for quick and efficient procedure calls
           + Exe. is automatically cached 
-            + Lowers memory requirements and increases application speed
+            + increases application speed
       ### Productivity and Ease
-          + Logic can be handle in store procedures
+          + Logic can be handled in stored procedures
           + Called by programmatic interfaces 
       ### Security Controls
           + Can grant user permission to execute a store procedure, independently
@@ -23,7 +23,16 @@
           + Can call functions
       ### 
     ## Example
-        CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
+      + NOTE: Requires CREATE PROCEDURE permission in the DB and ALTER permission on the schema you are creating it in 
+    
+      + Can be made in 2 different ways
+        + Query
+
+                CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
+        + SSMS
+            + Databases -> Database -> Programmability
+            + Right click Stored Procedures -> New Stored Procedure
+            + Control + Shift + M will allow you to setup parameters
     ## Execute store procedure
         exec myProcedure
 
