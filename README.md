@@ -58,7 +58,7 @@
         CREATE FUNCTION fxn_example (
           @varName Type
         )
-        RETURN TABLE AS
+        RETURNS TABLE AS
         RETURN
               SELECT * FROM Table_name WHERE table_name.varName >= @varName;
         
