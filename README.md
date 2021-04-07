@@ -9,11 +9,19 @@
             + Allows for quick and efficient procedure calls
           + Exe. is automatically cached 
             + Lowers memory requirements and increases application speed
-      ### Productivity and ease
+      ### Productivity and Ease
           + Logic can be handle in store procedures
           + Called by programmatic interfaces 
-      ### Sevurity controls
+      ### Security Controls
           + Can grant user permission to execute a store procedure, independently
+      ### Exception Handling
+          + Can use Try-Catch blocks to handle exceptions
+      ### Returning Multiple Values
+          + Can have an output parameter which allows for the function to effectively return multiple values
+      ### Variety
+          + Can perform transactions on the database
+          + Can call functions
+      ### 
     ## Example
         CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
     ## Execute store procedure
@@ -24,6 +32,7 @@
   ## What is function?
   + Functions allow us to create functions to perform complex calculations
   + Return result as a value
+      + Has to return either a scalar or table
 
     ### Built-in functions
         + Cannot be modified
@@ -40,6 +49,8 @@
         + You can use the function anywhere
       ### Execution
         + Reduces compilation cost **Transact-SQL** by caching the statments and reuse them.
+      ### Usage
+        + Can be used in SELECT/WHERE/HAVING statements
 
   ## Examples
   + Function examples
@@ -73,11 +84,11 @@
 
 
 # Summary
-    | Difference        |      Store Procedure(SP)          |  Functions (Fxn)           |
-    |-------------------|:---------------------------------:|---------------------------:|
-    | Return type       | Optional. Can even return 0       | Must return a value type   |
-    | Calls             | Cannot be called from Fxn         | Can be called in SP        |
-    | Statements usage  | INSERT, UPDATE, DELETE, SELECT    | Only SELECT statment       |
+| Difference       | Stored Procedure (SP)          | Functions (Fxn)          |
+|------------------|--------------------------------|--------------------------|
+| Return Type      | Optional. Can even return 0    | Must return a value type |
+| Calls            | Cannot be called from Fxn      | Can be called in SP      |
+| Statements Usage | INSERT, UPDATE, DELETE, SELECT | Only SELECT statement    |
 
 
 
@@ -129,7 +140,8 @@
         + *ERROR_MESSAGE* – Returns the most essential information and that is the message text of the error
 
 
-    ## Another example of error handling
+    ## Examples of Error Handling
+      ### System Exception
         BEGIN TRY
         -- Generate a divide-by-zero error  
           SELECT
@@ -144,3 +156,13 @@
             ERROR_LINE() AS ErrorLine,
             ERROR_MESSAGE() AS ErrorMessage;
         END CATCH;
+      ### User Exception
+        BEGIN TRY
+            THROW 1000, 'Encountered an exception', 2
+        END TRY
+        BEGIN CATCH
+            SELECT 
+                ERROR_NUMBER() AS ErrorNumber,
+                ERROR_MESSAGE() AS ErrorMessage,
+                ERROR_STATE() AS ErrorState;
+        END CATCH
