@@ -29,12 +29,16 @@
         + Query
 
                 CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
+          ![alt text](https://github.com/nicholasnevius/SQL-Notes/blob/master/IMG/CreateStoredProcedure.png?raw=true)
+a
+        
         + SSMS
             + Databases -> Database -> Programmability
             + Right click Stored Procedures -> New Stored Procedure
             + Control + Shift + M will allow you to setup parameters
     ## Execute store procedure
         exec myProcedure
+    ![plot](./IMG/ExecuteStoredProcedure.png)
 
 
 # Functions
@@ -45,7 +49,7 @@
 
     ### Built-in functions
         + Cannot be modified
-        + Can be referenced only in  Transact-SQL statements
+        + Can be referenced only in Transact-SQL statements
     ### User-defined functions
         + Use *CREATE FUNCTION* to generate a function
         + Can take 0+ parameters
@@ -74,6 +78,11 @@
         **Usage**
         SELECT * FROM database_object.fxn_example(20)
 
+    ![plot](./IMG/CreateTableReturnFunction.png)
+    ![plot](./IMG/ExecuteTableReturnFunction.png)
+
+
+
     ### Returns a SCALAR
         CREATE FUNCTION number_people_over_equal(
           @age INT
@@ -88,6 +97,8 @@
           
           RETURN(@returnvalue)
         END;
+    ![plot](./IMG/CreateScalarReturnFunction.png)
+    ![plot](./IMG/ExecuteScalarReturnFunction.png)
 
 
 
@@ -107,7 +118,7 @@
 
 # Error handling
   + Control over Transact - SQL code
-  + Translate message into more readible and understandable text
+  + Translate message into more readable and understandable text
     + Makes logging easy to track
 
     ## Two types
@@ -165,6 +176,8 @@
             ERROR_LINE() AS ErrorLine,
             ERROR_MESSAGE() AS ErrorMessage;
         END CATCH;
+      ![plot](./IMG/SystemException.png)
+
       ### User Exception
         BEGIN TRY
             THROW 1000, 'Encountered an exception', 2
@@ -175,3 +188,4 @@
                 ERROR_MESSAGE() AS ErrorMessage,
                 ERROR_STATE() AS ErrorState;
         END CATCH
+      ![plot](./IMG/UserException.png)
