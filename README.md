@@ -29,8 +29,8 @@
         + Query
 
                 CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
-          ![alt text](https://github.com/nicholasnevius/SQL-Notes/blob/master/IMG/CreateStoredProcedure.png?raw=true)
-a
+        ![plot](./IMG/CreateStoredProcedure.png)
+
         
         + SSMS
             + Databases -> Database -> Programmability
