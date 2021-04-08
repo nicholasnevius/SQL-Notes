@@ -46,7 +46,7 @@
         + Query
 
                 CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
-        ![plot](./IMG/CreateStoredProcedure.png)
+![plot](./IMG/CreateStoredProcedure.png)
 
         
         + SSMS
@@ -55,7 +55,7 @@
             + Control + Shift + M will allow you to setup parameters
     ## Execute store procedure
         exec myProcedure
-    ![plot](./IMG/ExecuteStoredProcedure.png)
+![plot](./IMG/ExecuteStoredProcedure.png)
 
 
 # Functions
