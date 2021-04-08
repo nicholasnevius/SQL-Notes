@@ -9,15 +9,21 @@
             + Allows for quick and efficient procedure calls
           + Exe. is automatically cached 
             + Increases application speed
+          + Reduced server/client network traffic due to executing the procedure as a single batch of code
       ### Productivity and Ease
           + Logic can be handled in stored procedures
           + Called by programmatic interfaces 
+          + If an application call causes the server to run a stored procedure you can modify the stored procedure to get changed functionality without needing to modify all clients
       ### Security Controls
-          + Can grant user permission to execute a store procedure, independently
+          + Can grant user permission to execute a stored procedure, independently of permissions on the database objects the stored procedure modifies
+          + Treats parameter input as a literal value which helps prevent SQL injection
+          + Can be encrypted
       ### Exception Handling
           + Can use Try-Catch blocks to handle exceptions
       ### Returning Multiple Values
           + Can have an output parameter which allows for the function to effectively return multiple values
+      ![plot](./IMG/CreateOutputStoredProcedure.png)
+      ![plot](./IMG/ExecuteOutputStoredProcedure.png)
       ### Variety
           + Can perform transactions on the database
           + Can call functions
