@@ -1,4 +1,4 @@
-# Stored Procedures and Functions in SQL
+# Stored Procedures, Functions, and Exception Handling in SQL
 # Stored Procedures
 ## What are stored procedures?
   + Pre-compiled objects that are saved and able to be executed anywhere.
