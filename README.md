@@ -51,7 +51,7 @@
         + Cannot be modified
         + Can be referenced only in Transact-SQL statements
     ### User-defined functions
-        + Use *CREATE FUNCTION* to generate a function
+        + Can use *CREATE FUNCTION* to generate a function
         + Can take 0+ parameters
         + returns a single data value
   ## Advantages
@@ -77,7 +77,7 @@
         
         **Usage**
         SELECT * FROM database_object.fxn_example(20)
-
+    ![plot](./IMG/DBDefinition.png)
     ![plot](./IMG/CreateTableReturnFunction.png)
     ![plot](./IMG/ExecuteTableReturnFunction.png)
 
