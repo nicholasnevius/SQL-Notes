@@ -27,6 +27,17 @@
       ### Variety
           + Can perform transactions on the database
           + Can call functions
+      ### User Defined
+          + Can be created in a user-defined database or in all system databased except the Resource database
+          + Can be implenented in T-SQL or as a reference to a CLR method
+      ### Temporary
+          + Type of user-defined stored procedure. Stored in tempdb. Deleted at the end of the last session using it.
+      ### System
+          + Included with SQL Server. Stored in hidden Resource database.
+      ### Extended User-Defined
+          + Are being removed in the future. Recommended to not use this feature
+
+  ## Types
       ### 
     ## Example
       + NOTE: Requires CREATE PROCEDURE permission in the DB and ALTER permission on the schema you are creating it in 
