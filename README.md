@@ -1,14 +1,14 @@
 # Stored Procedures and Functions in SQL
 # Stored Procedures
-## What is store procedures?
-  + Pre-compiled objects that is saved to execute anywhere.
+## What are store procedures?
+  + Pre-compiled objects that are saved and able to be executed anywhere.
   + Allow us to store repeated queries for reuse.
     ## Advantages
       ### Performance
           + Compiled once stored in executable form.
             + Allows for quick and efficient procedure calls
           + Exe. is automatically cached 
-            + increases application speed
+            + Increases application speed
       ### Productivity and Ease
           + Logic can be handled in stored procedures
           + Called by programmatic interfaces 
