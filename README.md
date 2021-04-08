@@ -27,6 +27,9 @@
       ### Variety
           + Can perform transactions on the database
           + Can call functions
+
+
+  ## Types
       ### User Defined
           + Can be created in a user-defined database or in all system databased except the Resource database
           + Can be implenented in T-SQL or as a reference to a CLR method
@@ -36,9 +39,6 @@
           + Included with SQL Server. Stored in hidden Resource database.
       ### Extended User-Defined
           + Are being removed in the future. Recommended to not use this feature
-
-  ## Types
-      ### 
     ## Example
       + NOTE: Requires CREATE PROCEDURE permission in the DB and ALTER permission on the schema you are creating it in 
     
@@ -46,16 +46,19 @@
         + Query
 
                 CREATE PROCEDURE myProcedure AS PRINT 'This is my store procedure:)'
-![plot](./IMG/CreateStoredProcedure.png)
+  ![plot](./IMG/CreateStoredProcedure.png)
 
         
         + SSMS
             + Databases -> Database -> Programmability
             + Right click Stored Procedures -> New Stored Procedure
             + Control + Shift + M will allow you to setup parameters
+  ![plot](./IMG/SSMSCreateStoredProcedure.png)
+  ![plot](./IMG/SSMSDefaultStoredProcedure.png)
+  ![plot](./IMG/SSMSTemplateParameterEditor.png)
     ## Execute store procedure
         exec myProcedure
-![plot](./IMG/ExecuteStoredProcedure.png)
+  ![plot](./IMG/ExecuteStoredProcedure.png)
 
 
 # Functions
