@@ -28,12 +28,12 @@
               @age_avg INT OUTPUT,
               @age_min INT OUTPUT,
               @age_max INT OUTPUT
-            )
+            ) AS
             BEGIN
               SELECT
-                @age_sum = SUM(age)
-                @age_avg = AVG(age)
-                @age_min = MIN(age)
+                @age_sum = SUM(age),
+                @age_avg = AVG(age),
+                @age_min = MIN(age),
                 @age_max = MAX(age)
               FROM PERSONS
             END;
