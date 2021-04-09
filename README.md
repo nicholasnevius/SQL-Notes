@@ -102,9 +102,6 @@
     or
 
         EXEC @return_value = dbo.myProcedure
-    or
-
-        SELECT 'Return Value' = @return_value
   ![plot](./IMG/ExecuteStoredProcedure.png)
 
       ALTER PROCEDURE dbo.myProcedure 
